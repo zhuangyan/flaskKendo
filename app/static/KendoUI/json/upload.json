@@ -1,0 +1,10 @@
+{
+    "result": "y",
+    "msg": "上传成功！",
+    "data": {
+        "url": "img/IKKI.png",
+        "name": "IKKI",
+        "extension": ".png",
+        "size": 29399
+    }
+}
