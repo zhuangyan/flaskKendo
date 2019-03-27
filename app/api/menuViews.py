@@ -17,8 +17,7 @@ from . import api
 @api.route('/menu',methods=['POST'])
 @jwt_required()
 def getMenu():
-    userid = current_identity.id
-    print(userid)
+    username = current_identity.username
     result = {
         "result": "y",
         "msg": "",
@@ -475,52 +474,15 @@ def getMenu():
                 "encoded": False
             },
             {
-                "text": "<i class='fas fa-envelope'></i><sup class='theme-m-bg'>9</sup>消息",
-                "encoded": False,
-                "cssClass": "links-message",
-                "url": "javascript:linkTo(\"/users/\", \"message\");"
-            },
-            {
-                "text": "<i class='fas fa-bell'></i><sup class='theme-m-bg'>8</sup>提醒",
-                "encoded": False,
-                "cssClass": "links-notice",
-                "url": "javascript:linkTo(\"/users/\", \"notice\");"
-            },
-            {
-                "text": "<hr>",
-                "encoded": False
-            },
-            {
-                "text": "<abbr>IKKI [ Admin ]</abbr><img src='img/IKKI.png' alt='IKKI'>",
+                "text": "<abbr>"+username+"</abbr><img src='img/IKKI.png' alt='"+username+"'>",
                 "encoded": False,
                 "items": [
-                    {
-                        "text": "<i class='fab fa-github'></i>Github",
-                        "encoded": False,
-                        "url": "https://github.com/IKKI2000/"
-                    },
-                    {
-                        "text": "<i class='fas fa-desktop'></i>前台网站",
-                        "encoded": False,
-                        "url": "site/index.html"
-                    },
-                    {
-                        "text": "<i class='fas fa-user'></i>用户中心",
-                        "encoded": False,
-                        "cssClass": "links-account",
-                        "url": "javascript:linkTo(\"/users/\", \"account\");"
-                    },
+
                     {
                         "text": "<i class='fas fa-key'></i>修改密码",
                         "encoded": False,
                         "cssClass": "links-password",
                         "url": "javascript:linkTo(\"/users/\", \"password\");"
-                    },
-                    {
-                        "text": "<i class='fas fa-cog'></i>系统设置",
-                        "encoded": False,
-                        "cssClass": "links-setting",
-                        "url": "javascript:linkTo(\"/users/\", \"setting\");"
                     },
                     {
                         "text": "<i class='fas fa-sign-out-alt'></i>退出登录",
