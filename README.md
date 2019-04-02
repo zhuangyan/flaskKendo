@@ -10,17 +10,23 @@
 1)数据库
 使用的是mongodb数据库,在settings.py中修改MONGO_URI为你自己的数据库连接地址．
 在数据库中建立集合 user
+
 2)python环境
 ~~~
 pip install -r requirements.txt 
 ~~~
 3)建立管理员账号
+
 在项目要目录下执行
+
 ~~~
 python manager.py createsuperuser
 ~~~
+
 根据提示创建管理员账号
+
 4)启动web服务
+
 ~~~
 python manager.py runserver
 ~~~
