@@ -1,5 +1,5 @@
 # flaskKendo
-[!["build:passed](https://travis-ci.org/zhuangyan/flaskKendo.svg)](https://travis-ci.org/zhuangyan/flaskKendo)
+[![build:passed](https://travis-ci.org/zhuangyan/flaskKendo.svg)](https://travis-ci.org/zhuangyan/flaskKendo)
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 ## 项目介绍
