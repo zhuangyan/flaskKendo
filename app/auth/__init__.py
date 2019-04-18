@@ -46,9 +46,12 @@ class Auth():
             return None
         else:
             if encrypt_password(password)==user["password"]:
+                avatar = "/static/KendoUI/img/avatar.png"
+                if user.get("avatar",""):
+                    avatar = user.get("avatar","")
                 return User(str(user["_id"]), user["username"]
                             ,is_admin=user["is_admin"]
-                            ,avatar=user.get("avatar",""))
+                            ,avatar=avatar)
     def identity(self, payload):
         """
         用户鉴权
@@ -58,7 +61,10 @@ class Auth():
         db = mongo.db
         user = db.user.find_one({"_id": ObjectId(user_id)})
         if user:
+            avatar = "/static/KendoUI/img/avatar.png"
+            if user.get("avatar", ""):
+                avatar = user.get("avatar", "")
             return User(str(user["_id"]), user["username"]
                         , is_admin=user["is_admin"]
-                        , avatar=user.get("avatar", ""))
+                        , avatar=avatar)
 

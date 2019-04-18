@@ -28,7 +28,6 @@ from . import api
 @jwt_required()
 def getNav():
     userid = current_identity.id
-    print(userid)
     result = {
         "result": "y",
         "msg": "",

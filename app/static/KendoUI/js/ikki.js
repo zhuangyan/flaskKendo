@@ -40,6 +40,7 @@ $(function() {
 (function($) {
     $.fn.ajaxPost = function(options) {
         var token = sessionStorage.getItem('token');
+        // console.log(token);
         var defaults = { // 参数默认值
                 ajaxAsync: true,
                 ajaxType: 'get', // GitHub Pages 演示只支持 get 请求，正常使用请改回 post 请求
@@ -78,7 +79,7 @@ $(function() {
             success: function(res, status, xhr) {
                 if (res.result !== 'denied') {
                     if (opts.urlType === 'api') {
-                        sessionStorage.setItem('token', xhr.getResponseHeader('Authorization'));
+                        // sessionStorage.setItem('token', xhr.getResponseHeader('Authorization'));
                     }
                     opts.finished(res);
                     if (res.result === 'y') {
@@ -93,7 +94,7 @@ $(function() {
                         }
                     }
                 } else {
-                    logout();
+                    // logout();
                 }
             },
             error: function(xhr, status, thrown) {
@@ -131,7 +132,7 @@ $(function() {
             dataType: 'json',
             success: function(res, status, xhr) {
                 if (res.result !== 'denied') {
-                    sessionStorage.setItem('token', xhr.getResponseHeader('Authorization'));
+                    // sessionStorage.setItem('token', xhr.getResponseHeader('Authorization'));
                     opts.finished(res);
                     if (res.result === 'y') {
                         opts.succeed(res);

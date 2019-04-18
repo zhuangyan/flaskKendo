@@ -482,7 +482,7 @@ def getMenu():
                         "text": "<i class='fas fa-key'></i>修改密码",
                         "encoded": False,
                         "cssClass": "links-password",
-                        "url": "javascript:linkTo(\"/users/\", \"password\");"
+                        "url": "javascript:linkTo(\"/admin/users/\", \"password\");"
                     },
                     {
                         "text": "<i class='fas fa-sign-out-alt'></i>退出登录",
