@@ -8,6 +8,7 @@
 
 ## 使用方式
 1)数据库
+
 使用的是mongodb数据库,在settings.py中修改MONGO_URI为你自己的数据库连接地址．
 在数据库中建立集合 user
 
