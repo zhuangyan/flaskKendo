@@ -11,7 +11,7 @@ class Config(object):
     DEBUG               = True
     SECRET_KEY          = 'a[U\\^U;N_OGX5WG+9F\:ba[U\\^yA|Nx|xf6"^'
     JWT_AUTH_URL_RULE = "/_api/auth/"
-    MONGO_URI = "mongodb://10.1.1.102:27017/kendo"
+    MONGO_URI = "mongodb://127.0.0.1:27017/kendo"
 
 
 
